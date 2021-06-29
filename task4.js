@@ -1,10 +1,22 @@
 function decimalToBinary(number) {
-    return  x = number.toString(2);
+    let result = '';
+    while(number > 0){
+        result += number % 2;
+     number = Math.floor(number/2)
+       }
+       let revres = ''
+       for(let i = result.length-1; i >= 0; i--) {
+        revres += result[i]
+    }
+console.log(typeof(revres),revres);
     
+    return revres
+
 }
 decimalToBinary(13)
 
-console.log(typeof(x), x) 
+
+
 
 
 function binaryToDecmal(binaryString) {
